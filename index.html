@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐园老师专业发展三年规划</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+    <script defer>
+        // 主题切换功能
+        const toggleTheme = () => {
+            document.documentElement.classList.toggle('dark')
+            const sunIcon = document.getElementById('sun-icon')
+            const moonIcon = document.getElementById('moon-icon')
+            sunIcon.classList.toggle('hidden')
+            moonIcon.classList.toggle('hidden')
+        }
+
+        // 滚动动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0')
+                    }
+                })
+            }, { threshold: 0.1 })
+
+            document.querySelectorAll('.animate-card').forEach(el => observer.observe(el))
+        })
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm z-10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-slate-800 dark:text-white">个人专业发展三年规划</h1>
+            <button onclick="toggleTheme()" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">
+                <svg id="sun-icon" class="w-6 h-6 text-slate-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 个人信息卡片 -->
+        <section class="animate-card mb-8 opacity-0 translate-y-6 transition-all duration-500">
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="space-y-2 flex-1">
+                        <h2 class="text-2xl font-bold text-slate-800 dark:text-white">乐园老师</h2>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-slate-600 dark:text-slate-300">
+                            <div><span class="font-medium">学科:</span> 数学</div>
+                            <div><span class="font-medium">职称:</span> 二级教师</div>
+                            <div><span class="font-medium">教龄:</span> 6年</div>
+                            <div><span class="font-medium">发展阶段:</span> 成熟期</div>
+                        </div>
+                    </div>
+                    <div class="border-l border-slate-200 dark:border-slate-700 pl-6 space-y-2">
+                        <h3 class="text-lg font-semibold text-slate-800 dark:text-white">核心目标</h3>
+                        <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                构建"生活化+游戏化"数学课堂
+
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                                取得一级教师职称
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SWOT分析 -->
+        <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-green-50 dark:bg-slate-800 p-4 rounded-xl border-l-4 border-green-500">
+                <h3 class="text-lg font-semibold mb-2 text-slate-800 dark:text-white">优势 (S)</h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 数学应用与数据统计能力</li>
+                    <li>• 跨学科整合能力</li>
+                    <li>• 信息技术应用熟练</li>
+                </ul>
+            </div>
+            <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-red-50 dark:bg-slate-800 p-4 rounded-xl border-l-4 border-red-500">
+                <h3 class="text-lg font-semibold mb-2 text-slate-800 dark:text-white">劣势 (W)</h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 教育理论基础薄弱</li>
+                    <li>• 职称晋升条件待完善</li>
+                    <li>• 科研经验不足</li>
+                </ul>
+            </div>
+            <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-blue-50 dark:bg-slate-800 p-4 rounded-xl border-l-4 border-blue-500">
+                <h3 class="text-lg font-semibold mb-2 text-slate-800 dark:text-white">机会 (O)</h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 新课标政策支持</li>
+                    <li>• 学校数字化资源</li>
+                    <li>• 智慧课堂平台</li>
+                </ul>
+            </div>
+            <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-orange-50 dark:bg-slate-800 p-4 rounded-xl border-l-4 border-orange-500">
+                <h3 class="text-lg font-semibold mb-2 text-slate-800 dark:text-white">挑战 (T)</h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 非师范专业转型</li>
+                    <li>• 家长高期待压力</li>
+                    <li>• 职称竞争激烈</li>
+                </ul>
+            </div>
+        </section>
+
+<!-- 发展规划时间轴 -->
+<section class="space-y-8">
+    <!-- 2025-2026 -->
+    <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex items-center mb-4">
+            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3">1</div>
+            <h2 class="text-xl font-bold text-slate-800 dark:text-white">基础建设阶段 (2025-2026)</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-blue-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    </svg>
+                    师德修养
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 每周与5名学生谈心</li>
+                    <li>• 辅导学困生计划</li>
+                    <li class="text-green-500 font-medium">目标：成绩提升10%</li>
+                </ul>
+            </div>
+            
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-green-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                    专业知识
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 研读数学课程标准</li>
+                    <li>• 儿童心理学慕课学习</li>
+                    <li class="text-green-500 font-medium">目标：掌握课标核心</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-purple-500 flex items-center">
+
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    专业能力
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 课堂纪律积分系统</li>
+                    <li>• 生活化案例开发</li>
+                    <li class="text-green-500 font-medium">目标：纪律问题减少50%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2026-2027 -->
+    <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+        <div class="flex items-center mb-4">
+            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">2</div>
+            <h2 class="text-xl font-bold text-slate-800 dark:text-white">深化提升阶段 (2026-2027)</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-blue-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    师德修养
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 数学实践作品展示</li>
+                    <li>• 家校沟通机制优化</li>
+                    <li class="text-green-500 font-medium">目标：家长满意度≥90%</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-green-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    专业知识
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 差异化教学策略</li>
+                    <li>• 分层作业系统开发</li>
+                    <li class="text-green-500 font-medium">目标：分层作业100%应用</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-purple-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    专业能力
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 优质公开课打造</li>
+                    <li>• 教学论文研究</li>
+                    <li class="text-green-500 font-medium">目标：论文开题+公开课获奖</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2027-2028 -->
+    <div class="animate-card opacity-0 translate-y-6 transition-all duration-500 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+
+
+        <div class="flex items-center mb-4">
+            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white mr-3">3</div>
+            <h2 class="text-xl font-bold text-slate-800 dark:text-white">创新突破阶段 (2027-2028)</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-blue-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    师德修养
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 新教师指导计划</li>
+                    <li>• 教学经验分享会</li>
+                    <li class="text-green-500 font-medium">目标：新教师考核合格</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-green-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    </svg>
+                    专业知识
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• STEAM课程设计</li>
+                    <li>• 多元评价体系构建</li>
+                    <li class="text-green-500 font-medium">目标：创建成长档案袋</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-slate-50 dark:bg-slate-700 rounded-lg">
+                <h3 class="font-semibold mb-2 text-purple-500 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                    专业能力
+                </h3>
+                <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                    <li>• 教学风格凝练</li>
+                    <li>• 职称材料整理</li>
+                    <li class="text-green-500 font-medium">目标：通过一级教师评审</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- 作者信息 -->
+        <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
+            <div class="text-center space-y-2">
+                <p class="text-slate-600 dark:text-slate-400">
+                    作者: 乐园<br>
+                    <a href="#" class="text-blue-500 hover:text-blue-600">Twitter/X</a>
+                </p>
+                <p class="text-sm text-slate-500 dark:text-slate-500"> 2024 中法城二小教师发展规划</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
+
